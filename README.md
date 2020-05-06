@@ -15,3 +15,15 @@ So what I have created in mainly for my own consumption.
 I have made changes to the original `Dockerfile` to fix errors I got.
 
 I have also downloaded `chrome.json` so that it may save you an additional step.
+
+## Instructions
+
+- Build the image using : `docker build . -t "google-chrome"`
+- You need X server or some sort, like XQuartz.: `brew cask install xquartz`
+- Open the `xterm` application from XQuartz (Right Click on XQuartz dock icon, Applications -> Terminal)
+- Now from within the xterm,
+  - cd to directory where you cloned this.
+  - `./setxhost.sh`
+  - This **must** be done form the `xterm` app
+  - You may close the `xterm` app now, or keep it open.
+- From iTerm2 (or `xterm` instance if already open) : `./run.sh`
